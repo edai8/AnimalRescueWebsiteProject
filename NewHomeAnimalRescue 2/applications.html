@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>New Home Animal Rescue - Applications</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/applications.css">
+
+  <script src="/js/common.js" defer></script>
+  <script src="/js/applications.js" defer></script>
+</head>
+
+<body>
+  <nav id="site-nav" class="site-nav"
+    aria-label="Main navigation"></nav>
+
+  <header id="site-banner" class="site-banner"></header>
+
+  <main class="page-section">
+    <div class="container">
+
+      <p class="eyebrow">Adoption administration</p>
+
+      <h2 class="section-heading">
+        Submitted Applications
+      </h2>
+
+      <p class="section-intro">
+        View adoption applications and manage their current status.
+      </p>
+
+      <p id="applications-message"
+        class="form-message"
+        role="status"
+        aria-live="polite"></p>
+
+      <div class="applications-table-wrapper">
+
+        <table class="applications-table">
+
+          <thead>
+            <tr>
+              <th>Date Submitted</th>
+              <th>Application ID</th>
+              <th>Shelter ID</th>
+              <th>Pet ID</th>
+              <th>Pet Type</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="applications-table-body">
+          </tbody>
+
+        </table>
+
+      </div>
+
+      <!-- Selected application details appears-->
+      <section id="application-details"
+        class="application-details"
+        hidden
+        aria-live="polite">
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+
+</body>
+</html>

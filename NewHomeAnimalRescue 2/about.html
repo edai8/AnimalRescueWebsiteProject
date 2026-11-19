@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Home Animal Rescue - About Us</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/aboutData.js" defer></script>
+  <script src="/js/common.js" defer></script>
+  <script src="/js/about.js" defer></script>
+</head>
+
+<body>
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation"></nav>
+  <header id="site-banner" class="site-banner"></header>
+
+  <main>
+    <section class="page-section">
+      <div class="container">
+        <p class="eyebrow">Our drive</p>
+        <h2 class="section-heading">Our Mission</h2>
+
+        <div class="mission-panel">
+          <!-- about.js inserts the mission statement -->
+          <p id="mission-text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Care in every corner</p>
+          <h2 class="section-heading">A Community That Cares</h2>
+
+          <p>
+            Our team works together to support animal health, responsible pet parents, and successful adoptions.
+          </p>
+        </div>
+
+        <img
+          class="about-image"
+          src="/images/newhomeanimalrescue.jpg"
+          alt="Rescues and Staff"
+        >
+      </div>
+    </section>
+
+    <section class="page-section reasons-section">
+      <div class="container">
+        <div class="centered">
+          <p class="eyebrow">The people behind the companions</p>
+          <h2 class="section-heading">Our Team</h2>
+
+          <!-- about.js inserts the team description -->
+          <p id="team-description" class="section-intro"></p>
+        </div>
+
+        <!-- about.js creates one card for each team member -->
+        <div id="team-grid" class="team-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

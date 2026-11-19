@@ -1,0 +1,155 @@
+/* Applications table */
+.applications-table-wrapper
+{
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 25px;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.applications-table
+{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.applications-table th,
+.applications-table td
+{
+  padding: 15px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.applications-table th
+{
+  background: var(--forest-dark);
+  color: var(--white);
+}
+
+.applications-table tr:last-child td
+{
+  border-bottom: none;
+}
+
+.applications-table tbody tr:hover
+{
+  background: var(--sage);
+}
+
+/* View buttons */
+.view-button
+{
+  margin-left: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 7px;
+  background: var(--forest);
+  color: var(--white);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.view-button:hover,
+.view-button.selected
+{
+  background: var(--coral);
+  color: #30231d;
+}
+
+/* Application status colours */
+.status-select
+{
+  min-width: 140px;
+  font-weight: 700;
+}
+
+.status-unprocessed
+{
+  background: #fff0d6;
+  color: #805000;
+}
+
+.status-pending
+{
+  background: #e5edff;
+  color: #254d91;
+}
+
+.status-rejected
+{
+  background: #ffe3e3;
+  color: #a32626;
+}
+
+.status-approved
+{
+  background: #dff3e4;
+  color: #21633a;
+}
+
+/* Application detail section */
+.application-details
+{
+  margin-top: 35px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.application-details h2,
+.application-details h3
+{
+  color: var(--forest-dark);
+}
+
+.application-details h3
+{
+  margin-top: 25px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.application-detail-grid
+{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 25px;
+}
+
+.application-detail-grid p
+{
+  margin: 5px 0;
+}
+
+.application-pet-image
+{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 15px 0;
+}
+
+.application-details p
+{
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px)
+{
+  .application-details
+  {
+    padding: 18px;
+  }
+
+  .application-detail-grid
+  {
+    grid-template-columns: 1fr;
+  }
+}

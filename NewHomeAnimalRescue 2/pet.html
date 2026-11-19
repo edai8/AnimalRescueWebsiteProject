@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Home Animal Rescue - Pet Details</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Load and detail page logic -->
+  <script src="/shelterData.js" defer></script>
+  <script src="/js/common.js" defer></script>
+  <script src="/js/pet.js" defer></script>
+</head>
+
+<body>
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation"></nav>
+  <header id="site-banner" class="site-banner"></header>
+
+  <main class="page-section">
+    <div class="container">
+      <p>
+        <!-- pet.js adds the selected shelter ID to this link -->
+        <a id="back-to-browsing" href="/browse">
+          &larr; Back to Browsing
+        </a>
+      </p>
+
+      <!-- Inserts the selected pet's details -->
+      <section
+        id="pet-details"
+        class="pet-details-grid"
+        aria-label="Pet details"
+      ></section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

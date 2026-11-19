@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Home Animal Rescue - Application</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Load shared helpers before the application script -->
+  <script src="/js/common.js" defer></script>
+  <script src="/js/apply.js" defer></script>
+</head>
+
+<body>
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation"></nav>
+  <header id="site-banner" class="site-banner"></header>
+
+  <main class="page-section">
+    <div class="container">
+      <div id="application-content">
+        <h2 class="section-heading centered">
+          Pet Adoption Application
+        </h2>
+
+        <p class="form-intro">
+          Please tell us about yourself and the home you can offer. Please note that completing this application does not guarantee adoption.
+        </p>
+
+        <form id="adoption-form" class="form-panel">
+          <!-- apply.js fills this section with the selected pet -->
+          <section
+            id="application-pet"
+            class="application-pet"
+            aria-label="Selected pet information"
+          ></section>
+
+          <fieldset class="form-section">
+            <legend>Your Information</legend>
+
+            <div class="form-grid">
+              <div class="form-field full-width">
+                <label class="field-label" for="full-name">
+                  Full Name
+                </label>
+
+                <input
+                  type="text"
+                  id="full-name"
+                  name="fullName"
+                  autocomplete="name"
+                  placeholder="Enter your first and last name"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label class="field-label" for="email">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="unicornbubblegum@gmail.com"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label class="field-label" for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="e.g. 613-888-8888"
+                  pattern="[0-9+().\-\s]{7,25}"
+                  title="Enter a valid phone number"
+                  required
+                >
+              </div>
+
+              <div class="form-field full-width">
+                <label class="field-label" for="address">
+                  Home Address
+                </label>
+
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  autocomplete="street-address"
+                  placeholder="Street, city, province, postal code"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label class="field-label" for="residents">
+                  Number of Residents in Your Home
+                </label>
+
+                <input
+                  type="number"
+                  id="residents"
+                  name="residents"
+                  min="1"
+                  max="100"
+                  step="1"
+                  placeholder="e.g. 3"
+                  required
+                >
+
+                <small>
+                  Include yourself and everyone living in the home
+                </small>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Current Pets in Your Home</legend>
+
+            <div class="form-field">
+              <label class="field-label" for="current-pets">
+                Tell us about your current pets
+              </label>
+
+              <textarea
+                id="current-pets"
+                name="currentPets"
+                placeholder="Example: One cat, 4 years old, healthy and vaccinated"
+              ></textarea>
+
+              <small>
+                Include their species, age, health, and other helpful details
+              </small>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Pet Experience</legend>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label class="field-label" for="experience">
+                  Experience with this Type of Pet
+                </label>
+
+                <select id="experience" name="experience" required>
+                  <option value="None">None</option>
+                  <option value="Some">Some</option>
+                  <option value="Extensive">Extensive</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label class="field-label" for="living-location">
+                  Where Will This Pet Primarily Live?
+                </label>
+
+                <select
+                  id="living-location"
+                  name="livingLocation"
+                  required
+                >
+                  <option value="Indoor">Indoor</option>
+                  <option value="Outdoor">Outdoor</option>
+                  <option value="Both">Both</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Support Us</legend>
+
+            <div class="form-field">
+              <label class="field-label" for="donation">
+                Optional Donation
+              </label>
+
+              <select id="donation" name="donation">
+                <option value="0">$0 — No donation</option>
+                <option value="5">$5</option>
+                <option value="10">$10</option>
+                <option value="25">$25</option>
+                <option value="50">$50</option>
+              </select>
+
+              <small>
+                Donations are optional and separate from adoption fees
+              </small>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Applicant Agreements</legend>
+
+            <div class="checkbox-list">
+              <label class="checkbox-row" for="care-agreement">
+                <input
+                  type="checkbox"
+                  id="care-agreement"
+                  name="careAgreement"
+                  required
+                >
+
+                <span>
+                  I agree to provide proper care, food, shelter, and medical attention for this pet
+                </span>
+              </label>
+
+              <label
+                class="checkbox-row"
+                for="adoption-understanding"
+              >
+                <input
+                  type="checkbox"
+                  id="adoption-understanding"
+                  name="adoptionUnderstanding"
+                  required
+                >
+
+                <span>
+                  I understand that submitting this application does not guarantee adoption
+                </span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button
+              type="submit"
+              id="submit-application"
+              class="button"
+              disabled
+            >
+              Submit Application
+            </button>
+
+            <a class="button button-secondary" href="/browse">
+              Return to Browsing
+            </a>
+          </div>
+
+          <p
+            id="form-message"
+            class="form-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+      </div>
+
+      <!-- apply.js reveals this section after submission -->
+      <section
+        id="application-success"
+        class="form-panel centered"
+        aria-live="polite"
+        hidden
+      ></section>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

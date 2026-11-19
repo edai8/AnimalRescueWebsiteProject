@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Home Animal Rescue - Browse Pets</title>
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/shelterData.js" defer></script>
+  <script src="/js/common.js" defer></script>
+  <script src="/js/browse.js" defer></script>
+</head>
+
+<body>
+  <nav id="site-nav" class="site-nav" aria-label="Main navigation"></nav>
+  <header id="site-banner" class="site-banner"></header>
+
+  <main class="page-section">
+    <div class="container">
+      <p class="eyebrow">Get to know your future companion</p>
+      <h2 class="section-heading">Browse Available Pets</h2>
+
+      <div class="browse-controls">
+        <div>
+          <label class="field-label" for="shelter-select">
+            Select a Shelter
+          </label>
+
+          <select id="shelter-select" name="shelter">
+            <option value="">-- Select a Shelter Here --</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="select-shelter-message" class="empty-state">
+        Please select a shelter to see its available animals.
+      </p>
+
+      <div id="shelter-pet-content" hidden>
+        <div class="browse-controls">
+          <div>
+            <span class="field-label" id="filter-label">
+              Filter by Pet Type
+            </span>
+
+            <div
+              class="filter-buttons"
+              id="filter-buttons"
+              role="group"
+              aria-labelledby="filter-label"
+            >
+              <button type="button" class="filter-button selected"
+                data-category="All" aria-pressed="true">All</button>
+
+              <button type="button" class="filter-button"
+                data-category="Cats" aria-pressed="false">Cats</button>
+
+              <button type="button" class="filter-button"
+                data-category="Dogs" aria-pressed="false">Dogs</button>
+
+              <button type="button" class="filter-button"
+                data-category="Birds" aria-pressed="false">Birds</button>
+
+              <button type="button" class="filter-button"
+                data-category="Reptiles" aria-pressed="false">Reptiles</button>
+
+              <button type="button" class="filter-button"
+                data-category="Other" aria-pressed="false">Other</button>
+            </div>
+          </div>
+        </div>
+
+        <p id="results-summary" class="results-summary"
+          aria-live="polite"></p>
+
+        <section
+          id="pet-grid"
+          class="pet-grid"
+          aria-label="Available pets"
+        ></section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
